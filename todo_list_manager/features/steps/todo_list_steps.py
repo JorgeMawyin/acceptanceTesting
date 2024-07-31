@@ -18,7 +18,6 @@ def step_then_todo_list_should_contain(context, task_name):
 def step_given_todo_list_contains_tasks(context):
     context.manager = ToDoListManager()
     for row in context.table:
-        # Parse the task attributes from the table
         name = row['Task']
         due_date = row.get('Due Date')
         priority = row.get('Priority')
